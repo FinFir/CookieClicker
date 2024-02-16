@@ -11,7 +11,7 @@ body {
 #cookie {
   width: 200px;
   height: 200px;
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYtx59gNihtBnqsrGVuPqp8sUSoHOonODQHggGCT8slA&s') center/cover;
+  background: url('https://media.istockphoto.com/id/517109442/photo/chocolate-chip-cookie-isolated.jpg?s=612x612&w=0&k=20&c=RgZOYwzVRTXnIBy8zSkXK-wJfNBy9w023UGULkbH_VE=') center/cover;
   cursor: pointer;
 }
 
@@ -28,5 +28,6 @@ button {
 }
 
 #autoClickBtn {
+  background-color: #0074cc; /* Blue color */
   color: white;
 }
