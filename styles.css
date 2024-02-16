@@ -11,7 +11,7 @@ body {
 #cookie {
   width: 200px;
   height: 200px;
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlfkHGJO6PJa5C-o4DdtnXe7F8RZe5Z_Md04PXLZ2xUw&s') center/cover;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYtx59gNihtBnqsrGVuPqp8sUSoHOonODQHggGCT8slA&s') center/cover;
   cursor: pointer;
 }
 
@@ -28,6 +28,5 @@ button {
 }
 
 #autoClickBtn {
-  background-color: #8B4513; /* Brown color */
   color: white;
 }
