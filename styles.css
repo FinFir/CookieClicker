@@ -26,3 +26,8 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
+#autoClickBtn {
+  background-color: #8B4513; /* Brown color */
+  color: white;
+}
