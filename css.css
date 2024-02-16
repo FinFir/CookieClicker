@@ -11,7 +11,7 @@ body {
 #cookie {
   width: 200px;
   height: 200px;
-  background: url('cookie.png') center/cover;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlfkHGJO6PJa5C-o4DdtnXe7F8RZe5Z_Md04PXLZ2xUw&s') center/cover;
   cursor: pointer;
 }
 
