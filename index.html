@@ -3,15 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Cookie Clicker</title>
+  <title>User Authentication & Cookie Clicker Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #cookie {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    #cookies {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    #grandma-container {
+      display: flex;
+      flex-direction: column; /* Set to vertical */
+      align-items: flex-start; /* Align to the left */
+      margin-top: 20px;
+      margin-left: auto; /* Position on the full right */
+    }
+
+    .grandma-img {
+      width: 100px; /* Adjusted to 100 pixels */
+      height: 100px; /* Adjusted to 100 pixels */
+      border-radius: 50%; /* Make it a circle */
+      margin: 5px 0; /* Adjust the spacing between grandmas */
+    }
+
+    #userList {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    #userList li {
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
+  <h1>User Authentication & Cookie Clicker Game</h1>
+
+  <h2>Register</h2>
+  <form id="registerForm">
+    <label for="registerUsername">Username:</label>
+    <input type="text" id="registerUsername" required>
+    <br>
+    <label for="registerPassword">Password:</label>
+    <input type="password" id="registerPassword" required>
+    <br>
+    <button type="submit">Register</button>
+  </form>
+
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label for="loginUsername">Username:</label>
+    <input type="text" id="loginUsername" required>
+    <br>
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" required>
+    <br>
+    <button type="submit">Login</button>
+  </form>
+
+  <h2>Cookie Clicker Game</h2>
   <img id="cookie" src="https://www.realsimple.com/thmb/uwmEcWtairipZTGavdWVbkV_dqw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chocolatechip-cookies_300-d6a402fc30814fdf87af28be97b5fcdc.jpg" alt="Chocolate Chip Cookie">
   <div id="cookies">0 cookies</div>
   <div id="grandma-container"></div>
-  <button onclick="buyAutoClick()">Buy AutoClicker</button>
-  <button onclick="buyGrandma()">Buy Grandma</button>
+
+  <h2>Registered Users</h2>
+  <ul id="userList"></ul>
 
   <script src="script.js"></script>
 </body>
