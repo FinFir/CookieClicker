@@ -12,6 +12,15 @@ body {
   width: 200px;
   height: 200px;
   cursor: pointer;
+  touch-action: none; /* Disable default touch behavior */
+}
+
+.chocolate-chip {
+  width: 10px;
+  height: 10px;
+  background-color: #4d2800; /* Dark brown for chocolate chips */
+  border-radius: 50%;
+  position: absolute;
 }
 
 #cookies {
@@ -36,3 +45,4 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
