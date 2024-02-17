@@ -13,6 +13,8 @@ body {
   height: 200px;
   cursor: pointer;
   touch-action: none; /* Disable default touch behavior */
+  user-drag: none; /* Disable dragging on some devices */
+  user-select: none; /* Disable text selection on click */
 }
 
 .chocolate-chip {
@@ -45,4 +47,3 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-
