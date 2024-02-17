@@ -42,6 +42,7 @@ function buyGrandma() {
     grandmaCount++;
     grandmaCost = Math.round(grandmaCost * 1.5); // 50% more expensive
     updateCookiesDisplay();
+    addGrandma();
   } else {
     alert(`Not Enough Cookies. You need ${grandmaCost - cookies} more to get a Grandma!`);
   }
@@ -56,14 +57,22 @@ function startAutoClicker() {
 function addChocolateChip() {
   const chocolateChip = document.createElement('div');
   chocolateChip.className = 'chocolate-chip';
-  const cookie = document.getElementById('cookie');
   const chipPosition = {
     top: Math.random() * 200,
     left: Math.random() * 200,
   };
   chocolateChip.style.top = `${chipPosition.top}px`;
   chocolateChip.style.left = `${chipPosition.left}px`;
-  cookie.appendChild(chocolateChip);
+  cookieElement.appendChild(chocolateChip);
+}
+
+function addGrandma() {
+  const grandmaContainer = document.getElementById('grandma-container');
+  const grandma = document.createElement('img');
+  grandma.src = 'https://i.pinimg.com/474x/e1/8f/4a/e18f4a4c8e716afeb5a1bbf598db00be.jpg';
+  grandma.alt = 'Grandma Image';
+  grandma.className = 'grandma-img';
+  grandmaContainer.appendChild(grandma);
 }
 
 function updateCookiesDisplay() {
