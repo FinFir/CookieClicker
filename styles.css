@@ -11,8 +11,18 @@ body {
 #cookie {
   width: 200px;
   height: 200px;
-  background: url('https://media.istockphoto.com/id/517109442/photo/chocolate-chip-cookie-isolated.jpg?s=612x612&w=0&k=20&c=RgZOYwzVRTXnIBy8zSkXK-wJfNBy9w023UGULkbH_VE=') center/cover;
-  cursor: pointer;
+  background-color: #8B4513; /* Brown color for the cookie */
+  border-radius: 50%; /* Make it a circle */
+  position: relative;
+  overflow: hidden;
+}
+
+.chocolate-chip {
+  width: 10px;
+  height: 10px;
+  background-color: #4d2800; /* Dark brown for chocolate chips */
+  border-radius: 50%;
+  position: absolute;
 }
 
 #cookies {
@@ -25,9 +35,4 @@ button {
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
-}
-
-#autoClickBtn {
-  background-color: #0074cc; /* Blue color */
-  color: white;
 }
