@@ -29,12 +29,22 @@ function addFallingCookie() {
   cookieEmoji.innerHTML = '🍪';
   fallingCookie.appendChild(cookieEmoji);
 
-  let position = 0;
-  const fallInterval = setInterval(() => {
-    position += 5;
-    fallingCookie.style.bottom = `${position}px`;
+  let positionX = Math.random() * window.innerWidth;
+  let positionY = 0;
+  let rotation = Math.random() * 360;
+  let size = Math.random() * 40 + 20; // Random size between 20 and 60
 
-    if (position >= window.innerHeight) {
+  fallingCookie.style.left = `${positionX}px`;
+  fallingCookie.style.top = `${positionY}px`;
+  fallingCookie.style.width = `${size}px`;
+  fallingCookie.style.height = `${size}px`;
+  fallingCookie.style.transform = `rotate(${rotation}deg)`;
+
+  const fallInterval = setInterval(() => {
+    positionY += 5;
+    fallingCookie.style.top = `${positionY}px`;
+
+    if (positionY >= window.innerHeight) {
       clearInterval(fallInterval);
       document.body.removeChild(fallingCookie);
     }
@@ -70,15 +80,4 @@ function startAutoClicker() {
   }, 1000);
 }
 
-function addGrandma() {
-  const grandmaContainer = document.getElementById('grandma-container');
-  const grandma = document.createElement('img');
-  grandma.src = 'https://i.pinimg.com/474x/e1/8f/4a/e18f4a4c8e716afeb5a1bbf598db00be.jpg';
-  grandma.alt = 'Grandma Image';
-  grandma.className = 'grandma-img';
-  grandmaContainer.appendChild(grandma);
-}
-
-function updateCookiesDisplay() {
-  document.getElementById('cookies').innerText = `${cookies} cookies`;
-}
+function add
