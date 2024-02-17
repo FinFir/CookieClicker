@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cookie = document.getElementById('cookie');
   const cookiesDisplay = document.getElementById('cookies');
   const grandmaContainer = document.getElementById('grandma-container');
+  const buyGrandmaBtn = document.getElementById('buyGrandmaBtn');
 
   let cookies = 0;
   let grandmas = 0;
@@ -63,6 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCookiesDisplay();
   });
 
+  buyGrandmaBtn.addEventListener('click', () => {
+    if (cookies >= 30) {
+      cookies -= 30;
+      grandmas++;
+      updateCookiesDisplay();
+      addGrandma();
+    } else {
+      alert('Not enough cookies to buy a grandma!');
+    }
+  });
+
   showUsersBtn.addEventListener('click', () => {
     // Fetch and display registered users
     fetch('/users')
@@ -87,15 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
     grandma.alt = 'Grandma Image';
     grandma.className = 'grandma-img';
     grandmaContainer.appendChild(grandma);
-    grandmas++;
   }
 
   setInterval(() => {
     cookies += grandmas;
     updateCookiesDisplay();
   }, 1000);
-
-  setInterval(() => {
-    addGrandma();
-  }, 10000);
 });
