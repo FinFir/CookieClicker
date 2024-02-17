@@ -49,3 +49,14 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
+.falling-cookie {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.falling-cookie span {
+  font-size: 20px; /* Adjust the size as needed */
+}
