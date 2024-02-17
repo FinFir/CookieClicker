@@ -7,7 +7,7 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 
-// Serve static files (including your HTML and JS)
+// Serve static files
 app.use(express.static('public'));
 
 // Endpoint to register a new user
@@ -43,20 +43,27 @@ app.post('/login', (req, res) => {
   res.json({ message: 'Login successful' });
 });
 
-// Endpoint to get all registered users (for demonstration purposes)
+// Endpoint to get all registered users
 app.get('/users', (req, res) => {
   const users = getUsers();
   res.json(users);
 });
 
+// Function to get users from the JSON file
 function getUsers() {
   const data = fs.readFileSync('users.json');
   return JSON.parse(data);
 }
 
+// Function to save users to the JSON file
 function saveUsers(users) {
   fs.writeFileSync('users.json', JSON.stringify(users));
 }
+
+// Serve the main HTML file
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
