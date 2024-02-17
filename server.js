@@ -59,9 +59,10 @@ function getUsers() {
 
 // Function to save users to the JSON file
 function saveUsers(users) {
-  fs.writeFileSync('users.json', JSON.stringify(users));
+  fs.writeFileSync('users.json', JSON.stringify(users, null, 2));
 }
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
