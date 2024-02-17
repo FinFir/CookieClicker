@@ -32,7 +32,8 @@ body {
 
 #grandma-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Set to vertical */
+  align-items: flex-end; /* Align to the right */
   margin-top: 20px;
 }
 
@@ -40,7 +41,7 @@ body {
   width: 100px; /* Adjusted to 100 pixels */
   height: 100px; /* Adjusted to 100 pixels */
   border-radius: 50%; /* Make it a circle */
-  margin: 0 5px; /* Adjust the spacing between grandmas */
+  margin: 5px 0; /* Adjust the spacing between grandmas */
 }
 
 button {
