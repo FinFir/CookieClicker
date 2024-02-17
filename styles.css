@@ -30,15 +30,17 @@ body {
   margin-top: 20px;
 }
 
-#grandma {
+#grandma-container {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
-  text-align: center;
 }
 
-#grandma img {
-  width: 50px; /* Adjust the size as needed */
-  height: 50px; /* Adjust the size as needed */
+.grandma-img {
+  width: 30px; /* Adjust the size as needed */
+  height: 30px; /* Adjust the size as needed */
   border-radius: 50%; /* Make it a circle */
+  margin: 0 5px; /* Adjust the spacing between grandmas */
 }
 
 button {
