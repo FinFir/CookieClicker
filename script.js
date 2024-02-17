@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const registerForm = document.getElementById('registerForm');
   const loginForm = document.getElementById('loginForm');
+  const authForms = document.getElementById('authForms');
+  const game = document.getElementById('game');
+  const showUsersBtn = document.getElementById('showUsersBtn');
   const userList = document.getElementById('userList');
   const cookie = document.getElementById('cookie');
   const cookiesDisplay = document.getElementById('cookies');
@@ -25,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const result = await response.json();
     alert(result.message);
+
+    // Hide registration and login forms, show game and user list button
+    authForms.style.display = 'none';
+    game.style.display = 'block';
+    showUsersBtn.style.display = 'block';
   });
 
   loginForm.addEventListener('submit', async (e) => {
@@ -43,11 +51,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const result = await response.json();
     alert(result.message);
+
+    // Hide registration and login forms, show game and user list button
+    authForms.style.display = 'none';
+    game.style.display = 'block';
+    showUsersBtn.style.display = 'block';
   });
 
   cookie.addEventListener('click', () => {
     cookies++;
     updateCookiesDisplay();
+  });
+
+  showUsersBtn.addEventListener('click', () => {
+    // Fetch and display registered users
+    fetch('/users')
+      .then(response => response.json())
+      .then(users => {
+        userList.innerHTML = '';
+        users.forEach(user => {
+          const listItem = document.createElement('li');
+          listItem.textContent = user.username;
+          userList.appendChild(listItem);
+        });
+      });
   });
 
   function updateCookiesDisplay() {
@@ -71,15 +98,4 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     addGrandma();
   }, 10000);
-
-  // Fetch and display registered users (for demonstration purposes)
-  fetch('/users')
-    .then(response => response.json())
-    .then(users => {
-      users.forEach(user => {
-        const listItem = document.createElement('li');
-        listItem.textContent = user.username;
-        userList.appendChild(listItem);
-      });
-    });
 });
