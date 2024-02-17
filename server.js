@@ -3,11 +3,9 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-
-// Serve static files
 app.use(express.static('public'));
 
 // Endpoint to register a new user
@@ -51,19 +49,18 @@ app.get('/users', (req, res) => {
 
 // Function to get users from the JSON file
 function getUsers() {
-  const data = fs.readFileSync('users.json');
-  return JSON.parse(data);
+  try {
+    const data = fs.readFileSync('users.json');
+    return JSON.parse(data);
+  } catch (error) {
+    return [];
+  }
 }
 
 // Function to save users to the JSON file
 function saveUsers(users) {
   fs.writeFileSync('users.json', JSON.stringify(users));
 }
-
-// Serve the main HTML file
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
