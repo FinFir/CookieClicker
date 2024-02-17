@@ -37,8 +37,8 @@ body {
 }
 
 .grandma-img {
-  width: 30px; /* Adjust the size as needed */
-  height: 30px; /* Adjust the size as needed */
+  width: 50px; /* Adjusted to 50 pixels */
+  height: 50px; /* Adjusted to 50 pixels */
   border-radius: 50%; /* Make it a circle */
   margin: 0 5px; /* Adjust the spacing between grandmas */
 }
