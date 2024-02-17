@@ -5,7 +5,8 @@ let autoClickerCost = 50;
 let grandmaCost = 30;
 let grandmaCount = 0;
 
-document.getElementById('cookie').addEventListener('click', clickCookie);
+let cookieElement = document.getElementById('cookie');
+cookieElement.addEventListener('click', clickCookie);
 
 function clickCookie() {
   cookies += clickValue + grandmaCount; // Add cookies from grandma
