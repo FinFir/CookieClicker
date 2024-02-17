@@ -33,8 +33,9 @@ body {
 #grandma-container {
   display: flex;
   flex-direction: column; /* Set to vertical */
-  align-items: flex-end; /* Align to the right */
+  align-items: flex-start; /* Align to the left */
   margin-top: 20px;
+  margin-left: auto; /* Position on the full right */
 }
 
 .grandma-img {
