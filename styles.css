@@ -11,18 +11,7 @@ body {
 #cookie {
   width: 200px;
   height: 200px;
-  background-color: #8B4513; /* Brown color for the cookie */
-  border-radius: 50%; /* Make it a circle */
-  position: relative;
-  overflow: hidden;
-}
-
-.chocolate-chip {
-  width: 10px;
-  height: 10px;
-  background-color: #4d2800; /* Dark brown for chocolate chips */
-  border-radius: 50%;
-  position: absolute;
+  cursor: pointer;
 }
 
 #cookies {
@@ -36,8 +25,8 @@ body {
 }
 
 #grandma img {
-  width: 100px;
-  height: 100px;
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
   border-radius: 50%; /* Make it a circle */
 }
 
