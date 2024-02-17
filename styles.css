@@ -52,11 +52,8 @@ button {
 
 .falling-cookie {
   position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .falling-cookie span {
-  font-size: 20px; /* Adjust the size as needed */
+  font-size: 40px; /* Adjust the size as needed */
 }
