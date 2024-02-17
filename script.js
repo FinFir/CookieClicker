@@ -80,4 +80,15 @@ function startAutoClicker() {
   }, 1000);
 }
 
-function add
+function addGrandma() {
+  const grandmaContainer = document.getElementById('grandma-container');
+  const grandma = document.createElement('img');
+  grandma.src = 'https://i.pinimg.com/474x/e1/8f/4a/e18f4a4c8e716afeb5a1bbf598db00be.jpg';
+  grandma.alt = 'Grandma Image';
+  grandma.className = 'grandma-img';
+  grandmaContainer.appendChild(grandma);
+}
+
+function updateCookiesDisplay() {
+  document.getElementById('cookies').innerText = `${cookies} cookies`;
+}
